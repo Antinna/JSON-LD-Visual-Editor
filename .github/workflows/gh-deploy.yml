@@ -34,9 +34,6 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: "Download SQLite WASM assets for Drift"
-        run: dart run tool/download_sqlite_wasm.dart
-
       - name: "Generate Drift DB and Web Worker files"
         run: flutter pub run build_runner build --delete-conflicting-outputs
 
